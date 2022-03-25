@@ -1,4 +1,5 @@
 import { Component, VERSION } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'my-app',
@@ -6,8 +7,8 @@ import { Component, VERSION } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+   na = new FormControl('data');
   name = 'Angular ' + VERSION.major;
-
   constructor() {
     //Converting array string to array
     let arr = '[a,b,c,d]';
