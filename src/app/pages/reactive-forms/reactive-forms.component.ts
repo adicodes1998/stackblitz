@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-forms',
@@ -6,7 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./reactive-forms.component.css'],
 })
 export class ReactiveFormsComponent implements OnInit {
-  constructor() {}
+  na = new FormControl('data');
+  
+  constructor() {
+    //Converting array string to array
+    let arr = '[a,b,c,d]';
+    let b = arr.slice(1, -1).split(',');
+    console.log(b);
+  }
 
   ngOnInit() {}
 }
